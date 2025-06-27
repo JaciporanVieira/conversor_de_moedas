@@ -1,106 +1,99 @@
-# 💱 Conversor de Moeda
+💱 Conversor de Moedas
+Este é um conversor de moedas desenvolvido em Java. O projeto consome uma API de taxas de câmbio para realizar conversões dinâmicas entre diferentes moedas diretamente via console.
 
-Este é um conversor de moedas em **Java**, que utiliza uma API externa para obter cotações atualizadas em tempo real. O projeto é modular, interativo e conta com registro de histórico das conversões realizadas pelo usuário.
+📌 Funcionalidades
+✅ Conversão de valores entre moedas internacionais (ex.: USD, BRL, EUR, etc.).
+✅ Consumo de uma API REST para obter taxas de câmbio atualizadas.
+✅ Manipulação de dados no formato JSON.
+✅ Interatividade por meio de um menu no console.
 
-## 📌 Funcionalidades
+🛠️ Tecnologias Utilizadas
+Java 17+: Linguagem principal do projeto.
 
-- ✅ Conversão de valores entre diferentes moedas (USD, BRL, ARS, etc.)
-- ✅ Consumo de API REST com retorno em JSON
-- ✅ Entrada de dados interativa via console
-- ✅ Persistência do histórico de conversões em arquivo
-- ✅ Configuração externa para chave da API
+HTTP Client (java.net.http): Para realizar requisições à API.
 
-## 🛠️ Tecnologias Utilizadas
+Manipulação de JSON: Usando uma biblioteca como Gson.
 
-- Java 17+
-- Requisições HTTP com `java.net.http`
-- Manipulação de JSON com a biblioteca Gson (`com.google.gson`)
-- Leitura e gravação de arquivos `FileWriter`
-- Arquivo `config.properties` para configuração externa da chave da API
+Controle de versão: Código versionado no GitHub.
 
-## ⚙️ Configuração da Chave da API
+⚙️ Configuração da Chave da API
+Para que o conversor funcione, é necessário obter uma chave de API válida. Essa chave é utilizada para acessar o serviço de taxas de câmbio.
 
-Para que o conversor funcione corretamente, é necessário fornecer uma chave de API válida. Essa chave é usada para acessar os dados de câmbio de moedas por meio de um serviço externo.
+🔐 Passo a Passo
+Crie o arquivo de configuração
+Crie um arquivo chamado config.properties na raiz do projeto.
 
-### 🔐 Passo a Passo para Configuração
+Adicione a sua chave da API
+Insira o seguinte conteúdo, substituindo SUA_CHAVE_AQUI por uma chave válida:
 
-1. Crie um arquivo chamado `config.properties` na raiz do projeto.
-2. Adicione a seguinte linha ao arquivo, substituindo `SUA_CHAVE_AQUI` pela chave da API que você obteve:
-
-   ```properties
-   api.key=SUA_CHAVE_AQUI
-Salve o arquivo. Ele será lido automaticamente pela aplicação quando for executada.
-
-🛡️ Segurança
-O arquivo config.properties já está incluído no .gitignore, então ele não será enviado ao GitHub, mantendo sua chave segura.
-
-Nunca compartilhe sua chave de API publicamente.
+ini
+Copiar
+Editar
+api.key=SUA_CHAVE_AQUI
+Garanta a segurança do arquivo
+O arquivo config.properties está listado no .gitignore, evitando que sua chave seja publicada no repositório.
 
 🌍 Onde obter uma chave de API?
-Você pode se registrar gratuitamente no ExchangeRate API, um serviço confiável e fácil de usar para obter taxas de câmbio de moedas em tempo real. O ExchangeRate API oferece planos gratuitos que atendem a necessidades básicas, permitindo acessar cotações atualizadas e realizar conversões simples, além de planos pagos com recursos adicionais para usos mais avançados.
-
-Para se cadastrar, acesse: exchangerate-api.com.
+Você pode se registrar gratuitamente no ExchangeRate API para obter uma chave.
 
 🚀 Como Executar
-Clone o repositório:
+Clone o repositório
 
 bash
 Copiar
 Editar
-git clone https://github.com/jaciporan-vieira/conversor-de-moeda.git
-cd conversor-de-moeda
-Crie e configure o arquivo config.properties conforme instruído acima.
+git clone https://github.com/JaciporanVieira/conversor_de_moedas.git
+cd conversor_de_moedas
+Configure a chave da API
+Siga as instruções da seção anterior para configurar o arquivo config.properties.
 
-Compile os arquivos Java:
+Compile o projeto
 
-bash
+css
 Copiar
 Editar
-javac ConversorMoeda.java
-Execute a aplicação:
+javac src/Main.java
+Execute a aplicação
 
-bash
+css
 Copiar
 Editar
-java ConversorMoeda
-🧾 Histórico de Conversões
-Todas as conversões realizadas são salvas automaticamente em um arquivo chamado conversionHistory.json. Isso permite que o usuário acompanhe os valores convertidos ao longo do tempo.
-
+java src.Main
 📂 Estrutura do Projeto
 bash
 Copiar
 Editar
-conversor-de-moedas/
+conversor_de_moedas/
 ├── src/
 │   ├── client/
 │   │   ├── ApiKeyProvider.java           # Fornece a chave da API
 │   │   └── ExchangeRateClient.java       # Cliente para consumir taxas de câmbio
 │   ├── model/
-│   │   ├── ConversionRateResponse.java   # Representa a resposta da API de câmbio
+│   │   ├── ConversionRateResponse.java   # Representa a resposta da API
 │   │   └── Menu.java                     # Interface de menu do app
 │   ├── service/
-│   │    └── ConversionHistorySaver.java  # Salva o histórico de conversões
+│   │    └── ConversionHistorySaver.java  # (Opcional) Salva o histórico de conversões
 │   └── Main.java                         # Classe principal para execução
 ├── config.properties                     # Configurações (chave da API)
-└── conversionHistory.json                # Arquivo com histórico de conversões
+└── README.md                             # Documentação do projeto
 🤝 Contribuindo
-Contribuições são bem-vindas!
+Contribuições são bem-vindas! Siga os passos abaixo para colaborar:
 
-Faça um fork.
+Faça um fork do repositório.
 
-Crie uma branch:
+Crie uma branch para suas alterações:
 
 bash
 Copiar
 Editar
 git checkout -b feature/nova-funcionalidade
-Commit suas alterações:
+Faça o commit das suas alterações:
 
-bash
+sql
 Copiar
 Editar
 git commit -m 'Adiciona nova funcionalidade'
-Envie a branch:
+Faça o push para o repositório remoto:
 
 bash
 Copiar
@@ -108,4 +101,4 @@ Editar
 git push origin feature/nova-funcionalidade
 Abra um Pull Request.
 
-Desenvolvido com 💻 por Jaciporan Vieira da Silva.
+Desenvolvido com 💻 por Jaciporan Vieira.
