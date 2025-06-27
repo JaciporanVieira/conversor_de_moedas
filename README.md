@@ -1,54 +1,89 @@
 
-# Conversor de Moedas
+# 💱 Conversor de Moedas
 
-Este é um projeto em **Java** desenvolvido para realizar a conversão de moedas utilizando taxas de câmbio dinâmicas de uma API externa. A aplicação oferece um menu interativo no console com pelo menos 6 opções de conversão.
+Este é um conversor de moedas em **Java**, que utiliza uma API externa para obter cotações atualizadas em tempo real. O projeto é modular, interativo e realiza a conversão de moedas diretamente via console.
 
-## Funcionalidades
+## 📌 Funcionalidades
 
-- **Conversão dinâmica**: Calcula a conversão de valores entre diferentes moedas em tempo real.
-- **Interface de console**: Menu interativo para facilitar o uso.
-- **Manipulação de dados JSON**: Integração com API para obter taxas de câmbio atualizadas.
-- **Código versionado no GitHub**: Código organizado e acessível para colaboradores.
+✅ Conversão de valores entre diferentes moedas (USD, BRL, EUR, etc.)  
+✅ Consumo de API REST com retorno em JSON  
+✅ Entrada de dados interativa via console  
+✅ Configuração externa para chave da API  
 
-## Tecnologias utilizadas
+## 🛠️ Tecnologias Utilizadas
 
-- **Java**: Linguagem de programação principal.
-- **IntelliJ IDEA**: Ambiente de desenvolvimento integrado (IDE).
-- **API de taxas de câmbio**: Para obter os valores atualizados das moedas.
-- **Bibliotecas JSON**: Para manipulação e extração de dados da API.
+- **Java 17+**  
+- **Requisições HTTP** com `java.net.http`  
+- **Manipulação de JSON** com a biblioteca `com.google.gson`  
+- **Arquivo config.properties** para configuração externa da chave da API  
 
-## Como executar
+## ⚙️ Configuração da Chave da API
 
-1. Clone o repositório:
+Para que o conversor funcione corretamente, é necessário fornecer uma chave de API válida. Essa chave é usada para acessar os dados de câmbio de moedas por meio de um serviço externo.
+
+### 🔐 Passo a Passo para Configuração
+
+1. Crie um arquivo chamado `config.properties` na raiz do projeto.
+2. Adicione a seguinte linha ao arquivo, substituindo `SUA_CHAVE_AQUI` pela chave da API que você obteve:
+
+   ```
+   api.key=SUA_CHAVE_AQUI
+   ```
+
+3. Salve o arquivo. Ele será lido automaticamente pela aplicação quando for executada.
+
+### 🛡️ Segurança
+
+- O arquivo `config.properties` já está incluído no `.gitignore`, então ele não será enviado ao GitHub, mantendo sua chave segura.
+- **Nunca compartilhe sua chave de API publicamente.**
+
+### 🌍 Onde obter uma chave de API?
+
+Você pode se registrar gratuitamente no ExchangeRate API, um serviço confiável e fácil de usar para obter taxas de câmbio de moedas em tempo real.  
+
+Para se cadastrar, acesse: [ExchangeRate API](https://www.exchangerate-api.com/)
+
+## 🚀 Como Executar
+
+1. Clone o repositório:  
    ```bash
    git clone https://github.com/JaciporanVieira/conversor_de_moedas.git
+   cd conversor_de_moedas
    ```
-2. Importe o projeto em sua IDE de preferência (recomenda-se o IntelliJ IDEA).
-3. Configure sua chave de acesso à API no código (caso necessário).
-4. Execute a aplicação diretamente pela IDE ou terminal.
 
-## Estrutura do projeto
+2. Crie e configure o `config.properties` conforme instruído acima.
+3. Compile os arquivos Java:  
+   ```bash
+   javac src/Main.java
+   ```
+4. Execute a aplicação:  
+   ```bash
+   java src.Main
+   ```
+
+## 📂 Estrutura do Projeto
 
 ```plaintext
 conversor_de_moedas/
 ├── src/
-│   ├── Main.java
-│   ├── ConversorMoedas.java
-│   └── UtilJSON.java
-├── README.md
-└── pom.xml
+│   ├── Main.java                    # Classe principal para execução
+│   ├── ConversorMoedas.java         # Realiza conversões de moedas
+│   └── UtilJSON.java                # Manipula os dados recebidos da API
+├── README.md                        # Documentação do projeto
+├── config.properties                # Configurações (chave da API)
+└── pom.xml                          # Dependências e build do projeto
 ```
 
-## Melhorias futuras
+## 🤝 Contribuindo
 
-- Adicionar suporte a mais moedas.
-- Implementar uma interface gráfica.
-- Otimizar o tratamento de erros e mensagens ao usuário.
+Contribuições são bem-vindas!  
 
-## Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+1. Faça um fork  
+2. Crie uma branch (git checkout -b feature/nova-funcionalidade)  
+3. Commit suas alterações (git commit -m 'Adiciona nova funcionalidade')  
+4. Push na branch (git push origin feature/nova-funcionalidade)  
+5. Abra um Pull Request  
 
 ---
 
-**Autor:** [Jaciporan Vieira](https://github.com/JaciporanVieira)
+Desenvolvido com 💻 por [Jaciporan Vieira](https://github.com/JaciporanVieira).
