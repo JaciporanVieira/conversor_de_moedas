@@ -28,10 +28,6 @@ Para que o conversor funcione corretamente, é necessário fornecer uma chave de
 
 api.key=SUA_CHAVE_AQUI
 
-less
-Copiar
-Editar
-
 3. Salve o arquivo. A aplicação irá lê-lo automaticamente na execução.
 
 ## 🌍 Onde obter uma chave de API?
@@ -49,13 +45,11 @@ Configure o arquivo config.properties conforme instruído.
 
 Compile os arquivos Java:
 
-bash
 Copiar
 Editar
 javac src/main/java/*.java
 Execute a aplicação:
 
-bash
 Copiar
 Editar
 java -cp src/main/java ConversorDeMoedas
@@ -63,7 +57,7 @@ java -cp src/main/java ConversorDeMoedas
 Todas as conversões realizadas são salvas automaticamente em um arquivo chamado conversionHistory.json, permitindo ao usuário acompanhar os valores convertidos ao longo do tempo.
 
 📂 Estrutura do Projeto
-bash
+
 Copiar
 Editar
 conversor-de-moedas/
@@ -86,19 +80,16 @@ Faça um fork do repositório.
 
 Crie uma branch para sua funcionalidade:
 
-bash
 Copiar
 Editar
 git checkout -b feature/nova-funcionalidade
 Faça commit das suas alterações:
 
-bash
 Copiar
 Editar
 git commit -m 'Adiciona nova funcionalidade'
 Envie a branch para o repositório remoto:
 
-bash
 Copiar
 Editar
 git push origin feature/nova-funcionalidade
