@@ -1,104 +1,54 @@
-💱 Conversor de Moedas
-Este é um conversor de moedas desenvolvido em Java. O projeto consome uma API de taxas de câmbio para realizar conversões dinâmicas entre diferentes moedas diretamente via console.
 
-📌 Funcionalidades
-✅ Conversão de valores entre moedas internacionais (ex.: USD, BRL, EUR, etc.).
-✅ Consumo de uma API REST para obter taxas de câmbio atualizadas.
-✅ Manipulação de dados no formato JSON.
-✅ Interatividade por meio de um menu no console.
+# Conversor de Moedas
 
-🛠️ Tecnologias Utilizadas
-Java 17+: Linguagem principal do projeto.
+Este é um projeto em **Java** desenvolvido para realizar a conversão de moedas utilizando taxas de câmbio dinâmicas de uma API externa. A aplicação oferece um menu interativo no console com pelo menos 6 opções de conversão.
 
-HTTP Client (java.net.http): Para realizar requisições à API.
+## Funcionalidades
 
-Manipulação de JSON: Usando uma biblioteca como Gson.
+- **Conversão dinâmica**: Calcula a conversão de valores entre diferentes moedas em tempo real.
+- **Interface de console**: Menu interativo para facilitar o uso.
+- **Manipulação de dados JSON**: Integração com API para obter taxas de câmbio atualizadas.
+- **Código versionado no GitHub**: Código organizado e acessível para colaboradores.
 
-Controle de versão: Código versionado no GitHub.
+## Tecnologias utilizadas
 
-⚙️ Configuração da Chave da API
-Para que o conversor funcione, é necessário obter uma chave de API válida. Essa chave é utilizada para acessar o serviço de taxas de câmbio.
+- **Java**: Linguagem de programação principal.
+- **IntelliJ IDEA**: Ambiente de desenvolvimento integrado (IDE).
+- **API de taxas de câmbio**: Para obter os valores atualizados das moedas.
+- **Bibliotecas JSON**: Para manipulação e extração de dados da API.
 
-🔐 Passo a Passo
-Crie o arquivo de configuração
-Crie um arquivo chamado config.properties na raiz do projeto.
+## Como executar
 
-Adicione a sua chave da API
-Insira o seguinte conteúdo, substituindo SUA_CHAVE_AQUI por uma chave válida:
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/JaciporanVieira/conversor_de_moedas.git
+   ```
+2. Importe o projeto em sua IDE de preferência (recomenda-se o IntelliJ IDEA).
+3. Configure sua chave de acesso à API no código (caso necessário).
+4. Execute a aplicação diretamente pela IDE ou terminal.
 
-ini
-Copiar
-Editar
-api.key=SUA_CHAVE_AQUI
-Garanta a segurança do arquivo
-O arquivo config.properties está listado no .gitignore, evitando que sua chave seja publicada no repositório.
+## Estrutura do projeto
 
-🌍 Onde obter uma chave de API?
-Você pode se registrar gratuitamente no ExchangeRate API para obter uma chave.
-
-🚀 Como Executar
-Clone o repositório
-
-bash
-Copiar
-Editar
-git clone https://github.com/JaciporanVieira/conversor_de_moedas.git
-cd conversor_de_moedas
-Configure a chave da API
-Siga as instruções da seção anterior para configurar o arquivo config.properties.
-
-Compile o projeto
-
-css
-Copiar
-Editar
-javac src/Main.java
-Execute a aplicação
-
-css
-Copiar
-Editar
-java src.Main
-📂 Estrutura do Projeto
-bash
-Copiar
-Editar
+```plaintext
 conversor_de_moedas/
 ├── src/
-│   ├── client/
-│   │   ├── ApiKeyProvider.java           # Fornece a chave da API
-│   │   └── ExchangeRateClient.java       # Cliente para consumir taxas de câmbio
-│   ├── model/
-│   │   ├── ConversionRateResponse.java   # Representa a resposta da API
-│   │   └── Menu.java                     # Interface de menu do app
-│   ├── service/
-│   │    └── ConversionHistorySaver.java  # (Opcional) Salva o histórico de conversões
-│   └── Main.java                         # Classe principal para execução
-├── config.properties                     # Configurações (chave da API)
-└── README.md                             # Documentação do projeto
-🤝 Contribuindo
-Contribuições são bem-vindas! Siga os passos abaixo para colaborar:
+│   ├── Main.java
+│   ├── ConversorMoedas.java
+│   └── UtilJSON.java
+├── README.md
+└── pom.xml
+```
 
-Faça um fork do repositório.
+## Melhorias futuras
 
-Crie uma branch para suas alterações:
+- Adicionar suporte a mais moedas.
+- Implementar uma interface gráfica.
+- Otimizar o tratamento de erros e mensagens ao usuário.
 
-bash
-Copiar
-Editar
-git checkout -b feature/nova-funcionalidade
-Faça o commit das suas alterações:
+## Contribuições
 
-sql
-Copiar
-Editar
-git commit -m 'Adiciona nova funcionalidade'
-Faça o push para o repositório remoto:
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-bash
-Copiar
-Editar
-git push origin feature/nova-funcionalidade
-Abra um Pull Request.
+---
 
-Desenvolvido com 💻 por Jaciporan Vieira.
+**Autor:** [Jaciporan Vieira](https://github.com/JaciporanVieira)
