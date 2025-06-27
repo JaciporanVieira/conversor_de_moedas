@@ -74,6 +74,27 @@ conversor_de_moedas/
 └── pom.xml                          # Dependências e build do projeto
 ```
 
+## 🖥️ Interface do Terminal
+
+Quando a aplicação é executada, o seguinte menu é exibido para o usuário:
+
+```
+---- SEJA BEM-VINDO AO CONVERSOR DE MOEDAS ----
+
+Escolha uma das opções:
+1. Dólar -> Real
+2. Real -> Dólar
+3. Dólar -> Peso Argentino
+4. Peso Argentino -> Dólar
+5. Dólar -> Peso Colombiano
+6. Peso Colombiano -> Dólar
+7. Exibir Histórico de Conversões
+8. Sair
+-> Opção:
+```
+
+O usuário pode escolher uma das opções para realizar a conversão ou acessar o histórico de conversões realizadas.
+
 ## 🤝 Contribuindo
 
 Contribuições são bem-vindas!  
