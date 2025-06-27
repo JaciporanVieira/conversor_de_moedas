@@ -26,6 +26,11 @@ Para que o conversor funcione corretamente, é necessário fornecer uma chave de
 1. Crie um arquivo chamado `config.properties` na raiz do projeto.
 2. Adicione a seguinte linha ao arquivo, substituindo `SUA_CHAVE_AQUI` pela chave da API obtida:
 
+api.key=SUA_CHAVE_AQUI
+
+less
+Copiar
+Editar
 
 3. Salve o arquivo. A aplicação irá lê-lo automaticamente na execução.
 
@@ -40,5 +45,66 @@ Você pode se registrar gratuitamente no [ExchangeRate API](https://www.exchange
 ```bash
 git clone https://github.com/seu-usuario/conversor-de-moedas.git
 cd conversor-de-moedas
+Configure o arquivo config.properties conforme instruído.
+
+Compile os arquivos Java:
+
+bash
+Copiar
+Editar
+javac src/main/java/*.java
+Execute a aplicação:
+
+bash
+Copiar
+Editar
+java -cp src/main/java ConversorDeMoedas
+🧾 Histórico de Conversões
+Todas as conversões realizadas são salvas automaticamente em um arquivo chamado conversionHistory.json, permitindo ao usuário acompanhar os valores convertidos ao longo do tempo.
+
+📂 Estrutura do Projeto
+bash
+Copiar
+Editar
+conversor-de-moedas/
+├── src/
+│   ├── client/
+│   │   ├── ApiKeyProvider.java            # Fornece a chave da API
+│   │   └── ExchangeRateClient.java        # Cliente para consumir taxas de câmbio
+│   ├── model/
+│   │   ├── ConversionRateResponse.java    # Representa a resposta da API
+│   │   └── Menu.java                      # Interface de menu no console
+│   ├── service/
+│   │   └── ConversionHistorySaver.java    # Salva histórico de conversões
+│   └── ConversorDeMoedas.java             # Classe principal do projeto
+├── config.properties                      # Arquivo de configuração da chave da API
+└── conversionHistory.json                 # Histórico de conversões
+🤝 Contribuindo
+Contribuições são muito bem-vindas!
+
+Faça um fork do repositório.
+
+Crie uma branch para sua funcionalidade:
+
+bash
+Copiar
+Editar
+git checkout -b feature/nova-funcionalidade
+Faça commit das suas alterações:
+
+bash
+Copiar
+Editar
+git commit -m 'Adiciona nova funcionalidade'
+Envie a branch para o repositório remoto:
+
+bash
+Copiar
+Editar
+git push origin feature/nova-funcionalidade
+Abra um Pull Request no GitHub.
+
+Desenvolvido com 💻 por Jaciporan Vieira da Silva.
+
 
 
