@@ -1,41 +1,44 @@
-# **Conversor de Moedas** 🌍💱  
+# 💱 Conversor de Moedas
 
----
+Este é um conversor de moedas em **Java**, que utiliza uma API externa para obter cotações atualizadas em tempo real. O projeto é modular, interativo e conta com registro de histórico das conversões realizadas pelo usuário.
 
-## **Descrição**  
+## 📌 Funcionalidades
 
-O **Conversor de Moedas** é um projeto em **Java** que permite realizar conversões de moedas de forma dinâmica e precisa, utilizando a **API Exchange Rate**. Ideal para desenvolvedores iniciantes que desejam aprender a trabalhar com APIs e manipulação de dados JSON.  
+- ✅ Conversão de valores entre diferentes moedas (USD, BRL, ARS, COP, etc.)
+- ✅ Consumo de API REST com retorno em JSON
+- ✅ Entrada de dados interativa via console
+- ✅ Persistência do histórico de conversões em arquivo JSON
+- ✅ Configuração externa para chave da API via arquivo `config.properties`
+- ✅ Registro de logs com data e hora das operações
 
----
+## 🛠️ Tecnologias Utilizadas
 
-## **Funcionalidades**  
+- Java 11+
+- Requisições HTTP com `java.net.http.HttpClient`
+- Manipulação de JSON com a biblioteca Gson (`com.google.gson`)
+- Leitura e gravação de arquivos com `FileReader` e `FileWriter`
+- Configuração externa via arquivo `config.properties` para a chave da API
 
-✅ **Conversão entre várias moedas:**  
-- Dólar (USD) ↔ Real (BRL)  
-- Dólar (USD) ↔ Peso Argentino (ARS)  
-- Dólar (USD) ↔ Peso Colombiano (COP)  
+## ⚙️ Configuração da Chave da API
 
-✅ **Histórico de conversões:** Acompanhe as transações realizadas.  
-✅ **Logs de atividades:** Registre as conversões com data e hora.  
-✅ **Escalável:** Fácil de adicionar novas moedas e funcionalidades.  
+Para que o conversor funcione corretamente, é necessário fornecer uma chave de API válida, usada para acessar dados de câmbio por meio da ExchangeRate API.
 
----
+1. Crie um arquivo chamado `config.properties` na raiz do projeto.
+2. Adicione a seguinte linha ao arquivo, substituindo `SUA_CHAVE_AQUI` pela chave da API obtida:
 
-## **Pré-requisitos**  
 
-Certifique-se de ter os seguintes softwares e bibliotecas instalados:  
-1. Java 11+  
-2. IntelliJ IDEA  
-3. Git  
-4. **Biblioteca Gson**:  
-   - Faça o download da biblioteca no Maven Repository.  
-5. Postman (opcional):  
-   - Teste a API e visualize as respostas antes de implementar.  
+3. Salve o arquivo. A aplicação irá lê-lo automaticamente na execução.
 
----
+## 🌍 Onde obter uma chave de API?
 
-## **Como executar o projeto**  
+Você pode se registrar gratuitamente no [ExchangeRate API](https://www.exchangerate-api.com) para obter taxas de câmbio atualizadas em tempo real.
 
-1. Clone este repositório:  
-   ```bash
-   git clone https://github.com/seu-usuario/ConversorDeMoedas.git
+## 🚀 Como Executar
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/conversor-de-moedas.git
+cd conversor-de-moedas
+
+
